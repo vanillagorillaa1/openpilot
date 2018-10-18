@@ -137,6 +137,15 @@ class CarInterface(object):
       ret.steerKpV, ret.steerKiV = [[0.6], [0.05]]
       ret.steerKf = 0.00006
 
+    elif candidate ==  CAR.AVALON:
+      ret.safetyParam = 100
+      ret.wheelbase = 2.82
+      ret.steerRatio = 14.8  # official specs say 14.8
+      tire_stiffness_factor = 0.7933 # not optimized yet, taking value from camry
+      ret.mass = 3499 * CV.LB_TO_KG + std_cargo  # mean between min and max
+      ret.steerKpV, ret.steerKiV = [[0.6], [0.1]]
+      ret.steerKf = 0.00006   # full torque for 10 deg at 80mph means 0.00007818594
+
     ret.steerRateCost = 1.
     ret.centerToFront = ret.wheelbase * 0.44
 
@@ -147,7 +156,7 @@ class CarInterface(object):
     # to a negative value, so it won't matter.
     # hybrid models can't do stop and go even though the stock ACC can't
     if candidate in [CAR.PRIUS, CAR.RAV4H, CAR.LEXUS_RXH, CAR.CHR,
-                     CAR.CHRH, CAR.CAMRY, CAR.CAMRYH, CAR.HIGHLANDERH, CAR.HIGHLANDER]:
+                     CAR.CHRH, CAR.CAMRY, CAR.CAMRYH, CAR.HIGHLANDERH, CAR.HIGHLANDER, CAR.AVALON]:
       ret.minEnableSpeed = -1.
     elif candidate in [CAR.RAV4, CAR.COROLLA]: # TODO: hack ICE to do stop and go
       ret.minEnableSpeed = 19. * CV.MPH_TO_MS

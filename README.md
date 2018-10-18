@@ -73,6 +73,7 @@ Supported Cars
 | Kia<sup>6</sup>    | Stinger 2018          | SCC + LKAS           | Yes     | Stock          | 0mph             | 0mph           |
 | Lexus              | RX Hybrid 2017        | All                  | Yes     | Yes<sup>2</sup>| 0mph             | 0mph           |
 | Lexus              | RX Hybrid 2018        | All                  | Yes     | Yes<sup>2</sup>| 0mph             | 0mph           |
+| Toyota             | Avalon 2017           | All                  | Yes     | Yes<sup>2</sup>| 20mph            | 0mph           |
 | Toyota             | Camry 2018<sup>4</sup>| All                  | Yes     | Stock          | 0mph<sup>5</sup> | 0mph           |
 | Toyota             | C-HR 2018<sup>4</sup> | All                  | Yes     | Stock          | 0mph             | 0mph           |
 | Toyota             | Corolla 2017          | All                  | Yes     | Yes<sup>2</sup>| 20mph            | 0mph           |
